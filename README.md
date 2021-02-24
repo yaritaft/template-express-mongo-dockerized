@@ -1,16 +1,14 @@
-# How to run empty database
+# How to run the whole app
 ```bash
 chmod 711 up.sh
 ./up.sh
 ```
-
 # Warning
-You may have to access with Mongo Compass and create the database and collection manually. TODO: Review how to do this automatically.
-
+DB and Collection if it does not exists by accessing it and inserting data you are creating automatically.
 # Warning
 If you have some other service on port: 3000 or 27017 you will have issues because with Node or Mongo respectively.
 
-# How to run app
+# How to run app without docker
 ```typescript
 npx ts-node app.ts or npx nodemon app.ts
 ```
