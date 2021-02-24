@@ -1,6 +1,17 @@
 version: '3.3'
 
 services:
+  api: 
+    build: .
+    command: >
+      sh -c "npm install &&
+      npx nodemon app.ts"
+    ports:
+    - 3000:3000
+    - 27017:27017
+    # TODO: Review how to connect node to mongo without network host
+    network_mode: host
+    restart: always
   db:
     image: mongo:4.2.8
     restart: always
